@@ -354,7 +354,7 @@ function Accueil({ loading, loadingMsg, error, retryFn, onStart }: {
         Entraîne-toi à l&apos;épreuve MES de l&apos;UVSQ en conditions réelles
       </p>
       <p style={{ color: C.muted, fontSize: 12, marginBottom: 40, opacity: 0.6 }}>
-        Université de Versailles Saint-Quentin-en-Yvelines — UFR Simone Veil Santé
+        Université de Versailles Saint-Quentin-en-Yvelines
       </p>
 
       {error && (
