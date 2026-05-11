@@ -41,7 +41,8 @@ FORMAT DE RÉPONSE — retourne UNIQUEMENT ce JSON, rien d'autre :
   "rebondissements": ["Un élément inattendu qui complique la situation"]
 }
 
-Maximum 3 entrées par tableau. Commence directement par { sans aucun texte avant.`;
+IMPORTANT — nombre d'éléments_a_decouvrir : génère TOUJOURS exactement 2 éléments. Dans 1 cas sur 5 seulement, génère 3 éléments (quand la situation est complexe et le justifie vraiment).
+Maximum 3 entrées pour les autres tableaux (solutions, rebondissements). Commence directement par { sans aucun texte avant.`;
 
 const getComedienPrompt = (sujet: object) => `Tu incarnes ce personnage dans une simulation d'oral PASS/LAS (épreuve MES, UVSQ). Tu vis la scène de l'intérieur.
 
@@ -96,7 +97,7 @@ async function callClaude(systemPrompt: string, messages: { role: string; conten
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      model: "claude-sonnet-4-5",
+      model: "claude-haiku-4-5",
       max_tokens: maxTokens,
       system: systemPrompt,
       messages,
